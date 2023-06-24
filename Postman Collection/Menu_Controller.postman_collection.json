@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "b5ca42ca-e0bc-4699-b1fd-6f38a39fae25",
+		"name": "Menu Controller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25111053"
+	},
+	"item": [
+		{
+			"name": "Show User Menu links",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/menu/userMenu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"menu",
+						"userMenu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay Menu links",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/menu/PayMenu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"menu",
+						"PayMenu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin menu links",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/menu/AdminMenu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"menu",
+						"AdminMenu"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

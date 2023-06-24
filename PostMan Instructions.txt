@@ -1,0 +1,141 @@
+USER CONTROLLER:
+these are the web services for managing the Current user that uses all the web services
+Sign Up:
+this web service will let the user to create an account 
+in the body tab:
+you'll enter the credintials of the user in raw JSON format as follows:
+{
+    "Username": "*Keyword*",
+    "Email": "*KEYWORD*",
+    "Password": "*KEYWORD*"
+}
+
+Sign In:
+the user will log in with the credintials from the sign up process in order to use all the other services
+in the body tab:
+you'll enter the credintials of the user in raw JSON format as follows:
+{
+    "Username": "*KEYWORD*",
+    "Email": "*KEYWORD*",
+    "Password": "*KEYWORD*"
+}
+
+Get User:
+this web service will show if the user typed is in the database or not
+in the URL you will type the username of the user you want to check
+http://localhost:8080/users/*KEYWORD*
+example:
+http://localhost:8080/users/ali@gmail.com
+
+ADMIN CONTROLLER:
+these are the web services for the Admin options
+Set Mobile Discount:
+this web Service will set a specific discount on the mobile Service transactions by the admin
+in the params tab the wanted specific discount will be inserted in the value and the key "discountSpecific"
+
+Set Internet Discount:
+this web Service will set a specific discount on the Internet Service transactions by the admin
+in the params tab the wanted specific discount will be inserted in the value and the key "discountSpecific"
+
+Set Landline Discount:
+this web Service will set a specific discount on the Landline Service transactions by the admin
+in the params tab the wanted specific discount will be inserted in the value and the key "discountSpecific"
+
+Set Donation Discount:
+this web Service will set a specific discount on the Donation Service transactions by the admin
+in the params tab the wanted specific discount will be inserted in the value and the key "discountSpecific"
+
+Set Overall Discount:
+this web Service will set the overall discount on all the  transactions by the admin
+in the params tab the wanted specific discount will be inserted in the value and the key "overallDiscount"
+
+Show Refund Request:
+this web Service will print the current refund requests available for the admin with the indices 
+
+Send Refund Request:
+this web Service will allow the admin to authorize or deny on the specified index entered
+in the params tab you'll enter key "choice" with value (Either 1 to authorize  or 0 to deny)  the key "index" with the desired value from the "Show Refund Requests" web service
+
+MENU CONTROLLER:
+these web services will show all the available web Services in URL form
+
+Show User Menu links:
+these will show all the available Request URLs that the User can use
+
+Pay Menu links:
+these will show all the available Request URLs that the User can use in Pay menu
+
+Admin Menu links:
+these will show all the available Request URLs that the Admin can 
+
+OPERATION CONTROLLERS:
+these are the web services that the User uses
+Pay Mobile:
+this web service will allow the user to pay Mobile fees to the desired service provider, the amount to pay, the way of payment, and the credit card number
+in the params tab:
+the key "choice" is the way of payment, you can enter the values (1 for wallet payment, 2 for credit card payment, 3 for cash on delivary)
+the key "amount" is the amount of money you want to pay (keep in mind when the user signs up for the first time he will get 1,000 L.E in his wallet)
+the key "sp" is the service provider you want to pay for, the values(1 for Vodafone, 2 for Etisalat, 3 for Orange, 4 for WE)
+the key "ccn" is the credit car number, the value is the credit card number 
+
+Pay Internet:
+this web service will allow the user to pay Internet fees a to the desired service provider, the amount to pay, the way of payment, and the credit card number
+in the params tab:
+the key "choice" is the way of payment, you can enter the values (1 for wallet payment, 2 for credit card payment, 3 for cash on delivary)
+the key "amount" is the amount of money you want to pay (keep in mind when the user signs up for the first time he will get 1,000 L.E in his wallet)
+the key "sp" is the service provider you want to pay for, the values(1 for Vodafone, 2 for Etisalat, 3 for Orange, 4 for WE)
+the key "ccn" is the credit car number, the value is the credit card number 
+
+Pay Donation:
+this web service will allow the user to pay Donations a to the desired charity, the amount to pay, the way of payment, and the credit card number
+in the params tab:
+the key "choice" is the way of payment, you can enter the values (1 for wallet payment, 2 for credit card payment, 3 for cash on delivary)
+the key "amount" is the amount of money you want to pay (keep in mind when the user signs up for the first time he will get 1,000 L.E in his wallet)
+the key "sp" is the service provider you want to pay for, the values(1 for Cancer Hospitals, 2 for Schools, 3 for NGOs (Non-Profitable Organization))
+the key "ccn" is the credit car number, the value is the credit card number 
+
+Show Landline Receipt:
+this web service will allow the user to pay Landline fees a to the desired service provider, the amount to pay, the way of payment, and the credit card number
+in the params tab:
+the key "choice" is the way of payment, you can enter the values (1 for wallet payment, 2 for credit card payment, 3 for cash on delivary)
+the key "amount" is the amount of money you want to pay (keep in mind when the user signs up for the first time he will get 1,000 L.E in his wallet)
+the key "sp" is the service provider you want to pay for, the values(1 for Vodafone, 2 for Etisalat, 3 for Orange, 4 for WE)
+the key "ccn" is the credit car number, the value is the credit card number 
+
+Request Refund:
+this web service will allow the user to apply a request to refund a specific transaction 
+in the params tab: the key "choice" where you'll enter the value of the index from the "Show Available Refunds" web service
+
+Show Available Refunds:
+this will print all the available transactions that you can refund and their indices  and shows if they're refunded or not
+
+Add funds to wallet:
+this web service will allow the user to add funds to his wallet
+in the params tab:
+the key "cnum" is the credit card number, the value is the credit card number
+the key "cash" is the amount you want to deposit in the wallet, and enter the desired amount
+
+Show Wallet Balance:
+this will show the current balance in the wallet
+
+Search for:
+this web service will let the user print the options of the desired choice
+in the URL you will type one of the following choices to print the options:
+mobileservices
+internetservices
+landlineservices
+donations
+http://localhost:8080/users/search/*KEY WORD*
+example:http://localhost:8080/users/search/landlineservices
+
+Show Discounts:
+this will show the specific or overall Discounts that are currently applied
+in the URL you will type the choice:
+1 for mobile services
+2 for interne t services
+3 for landline services
+4 for donations
+5 for overall 
+http://localhost:8080/users/showDiscount/*KEY WORD*
+example:
+http://localhost:8080/users/showDiscount/2

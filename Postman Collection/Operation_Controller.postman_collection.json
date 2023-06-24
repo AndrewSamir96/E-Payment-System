@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "134e6e49-3a3c-44ad-a8e6-24165b185f0e",
+		"name": "Operation Controller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25111053"
+	},
+	"item": [
+		{
+			"name": "Pay Mobile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/pay/mobile?choice=1&amount=100&sp=1&ccn=654321654",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"pay",
+						"mobile"
+					],
+					"query": [
+						{
+							"key": "choice",
+							"value": "1"
+						},
+						{
+							"key": "amount",
+							"value": "100"
+						},
+						{
+							"key": "sp",
+							"value": "1"
+						},
+						{
+							"key": "ccn",
+							"value": "654321654"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay Internet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/pay/internet?choice=1&amount=250&sp=1&ccn=4654616512",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"pay",
+						"internet"
+					],
+					"query": [
+						{
+							"key": "choice",
+							"value": "1"
+						},
+						{
+							"key": "amount",
+							"value": "250"
+						},
+						{
+							"key": "sp",
+							"value": "1"
+						},
+						{
+							"key": "ccn",
+							"value": "4654616512"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Landline Receipt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/pay/landline?choice=1&amount=130&sp=1&ccn=564321321",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"pay",
+						"landline"
+					],
+					"query": [
+						{
+							"key": "choice",
+							"value": "1"
+						},
+						{
+							"key": "amount",
+							"value": "130"
+						},
+						{
+							"key": "sp",
+							"value": "1"
+						},
+						{
+							"key": "ccn",
+							"value": "564321321"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay Donation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/pay/donation?choice=1&amount=250&sp=1&ccn=654985631651",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"pay",
+						"donation"
+					],
+					"query": [
+						{
+							"key": "choice",
+							"value": "1"
+						},
+						{
+							"key": "amount",
+							"value": "250"
+						},
+						{
+							"key": "sp",
+							"value": "1"
+						},
+						{
+							"key": "ccn",
+							"value": "654985631651"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request Refund",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/refundRequest?choice=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"refundRequest"
+					],
+					"query": [
+						{
+							"key": "choice",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Available Refunds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/showRefunds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"showRefunds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Funds to Wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/addCash?cnum=51651231&cash=300",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"addCash"
+					],
+					"query": [
+						{
+							"key": "cnum",
+							"value": "51651231"
+						},
+						{
+							"key": "cash",
+							"value": "300"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Wallet Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/showWallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"showWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search for",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/search/mobileservices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"search",
+						"mobileservices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show discounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/showDiscount/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"showDiscount",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
